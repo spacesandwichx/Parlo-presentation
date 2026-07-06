@@ -570,6 +570,34 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
 .darrow:nth-child(12) svg{animation-delay:.8s;}
 @keyframes arrowGlow{0%,55%,100%{color:var(--brand);filter:none;transform:scale(1);}
   25%{color:var(--brand-600);filter:drop-shadow(0 0 7px rgba(37,192,90,.85));transform:scale(1.32);}}
+
+/* ===========================================================
+   INTRODUCTION / "ما هو Parlo؟"  (project intro · slide 2)
+   =========================================================== */
+.introwrap{display:flex;flex-direction:column;gap:34px;flex:1;justify-content:center;}
+/* hero definition — filled brand gradient, the core answer */
+.intro-lead{display:flex;align-items:center;gap:34px;padding:42px 48px;border-radius:30px;color:#fff;
+  background:linear-gradient(120deg,var(--brand-600),var(--olive));
+  box-shadow:0 22px 52px rgba(37,192,90,.28);position:relative;overflow:hidden;}
+.intro-lead::after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;
+  background:rgba(255,255,255,.10);top:-160px;left:-60px;filter:blur(6px);pointer-events:none;}
+.il-ic{width:92px;height:92px;border-radius:24px;background:rgba(255,255,255,.16);
+  display:flex;align-items:center;justify-content:center;flex:none;position:relative;z-index:1;}
+.il-ic svg{width:48px;height:48px;color:#fff;}
+.il-tx{position:relative;z-index:1;}
+.il-lab{font-family:var(--font-mono);font-size:15px;letter-spacing:.08em;text-transform:uppercase;
+  direction:ltr;display:inline-block;margin-bottom:10px;opacity:.85;}
+.il-tx p{font-weight:700;font-size:40px;line-height:1.28;color:#fff;}
+.il-tx p b{font-weight:900;}
+/* three supporting descriptors */
+.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.icard{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-sm);
+  padding:34px 30px;display:flex;flex-direction:column;gap:22px;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
+.icard:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(52,84,34,.16);}
+.ic-ic{width:64px;height:64px;border-radius:18px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;}
+.ic-ic svg{width:32px;height:32px;color:var(--olive);}
+.icard p{font-weight:600;font-size:25px;line-height:1.42;color:var(--ink);}
 </style>
 </head>
 <body>
@@ -592,14 +620,54 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <div class="grp"><div class="lbl">إشراف</div><div class="nm">د. ابتهال عبد الجبار</div></div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">01 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">01 / 18</div></div>
   </section>
 
-  <!-- ============================================================ SLIDE 2 · PROBLEM ============================================================ -->
+  <!-- ============================================================ SLIDE 2 · INTRODUCTION (project intro · ما هو Parlo؟) ============================================================ -->
   <section class="slide" dir="rtl">
+    <div class="blob" style="width:460px;height:460px;background:rgba(37,192,90,.14);top:-140px;left:-90px;"></div>
+    <div class="blob" style="width:380px;height:380px;background:rgba(94,124,62,.12);bottom:-150px;right:40px;"></div>
     <div class="frame">
       <div class="head reveal d1">
         <div class="eyebrow"><span class="dot"></span> المقدمة <span class="en">Introduction</span></div>
+        <h1 class="title">ما هو <span class="g">Parlo</span>؟</h1>
+      </div>
+      <div class="introwrap">
+        <!-- core definition -->
+        <div class="intro-lead reveal d2">
+          <div class="il-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+          </div>
+          <div class="il-tx">
+            <span class="il-lab">What is Parlo?</span>
+            <p>منصّة تعلّم لغات مدعومة <b>بالذكاء الاصطناعي</b>.</p>
+          </div>
+        </div>
+        <!-- supporting descriptors -->
+        <div class="intro-grid">
+          <div class="icard reveal d3">
+            <div class="ic-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M10 9l5 3-5 3z"/></svg></div>
+            <p>تحوّل المحتوى الصوتي والمرئي إلى تجربة تعلم تفاعلية.</p>
+          </div>
+          <div class="icard reveal d4">
+            <div class="ic-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></svg></div>
+            <p>تجمع أدوات التعلم في منصة واحدة.</p>
+          </div>
+          <div class="icard reveal d5">
+            <div class="ic-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+            <p>تدعم الإنجليزية والعربية (اللهجة الليبية) والفرنسية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">02 / 18</div></div>
+  </section>
+
+  <!-- ============================================================ SLIDE 3 · PROBLEM ============================================================ -->
+  <section class="slide" dir="rtl">
+    <div class="frame">
+      <div class="head reveal d1">
+        <div class="eyebrow"><span class="dot"></span> المشكلة <span class="en">Problem</span></div>
         <h1 class="title">المشكلة <span class="g">والفكرة</span></h1>
       </div>
       <div class="probwrap">
@@ -614,7 +682,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">02 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">03 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 3 · OBJECTIVES ============================================================ -->
@@ -633,7 +701,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <div class="irow reveal d4"><div class="badge">06</div><div><h3>توفير لوحة تحكم لإدارة النظام والمستخدمين</h3></div></div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">03 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">04 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 4 · PRIOR vs PROPOSED ============================================================ -->
@@ -668,7 +736,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">04 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">05 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 5 · TARGET USERS ============================================================ -->
@@ -684,13 +752,13 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
           <div class="tu-lt"><div class="tu-h">المتعلم</div><div class="tu-s">المستخدم الأساسي للمنصّة</div></div>
         </div>
         <div class="tu-cards">
-          <div class="tu-card reveal d3"><div class="tu-cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5z"/><path d="M6 10.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/><path d="M22 8v5"/></svg></div><h3>الطلاب</h3></div>
-          <div class="tu-card reveal d4"><div class="tu-cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>متعلمو اللغات</h3></div>
-          <div class="tu-card reveal d5"><div class="tu-cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6C10 4.5 6.5 4.5 3.5 5.5v13c3-1 6.5-1 8.5.5 2-1.5 5.5-1.5 8.5-.5v-13C17.5 4.5 14 4.5 12 6z"/><path d="M12 6v13"/></svg></div><h3>التعلم الذاتي</h3></div>
+          <div class="tu-card reveal d3"><div class="tu-cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>متعلمو اللغات بشكل مستقل</h3></div>
+          <div class="tu-card reveal d4"><div class="tu-cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5z"/><path d="M6 10.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/><path d="M22 8v5"/></svg></div><h3>طلاب الجامعات والدارسون</h3></div>
+          <div class="tu-card reveal d5"><div class="tu-cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></div><h3>المغتربون والمهنيون</h3></div>
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">05 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">06 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 6 · SYSTEM OVERVIEW (+ Home screenshot) ============================================================ -->
@@ -717,7 +785,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <div class="uflow-note reveal d6">رحلة المستخدم من <b>فيديو حقيقي</b> إلى <b>تعلّم ومراجعة</b>، في تدفّق واحد سلس.</div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">06 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">07 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 6 · ARCHITECTURE ============================================================ -->
@@ -753,7 +821,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">07 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">08 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 7 · TECH STACK ============================================================ -->
@@ -791,7 +859,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">08 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">09 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 8 · DATABASE ============================================================ -->
@@ -832,7 +900,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">09 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">10 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 10 · BACKEND IMPLEMENTATION HIGHLIGHTS ============================================================ -->
@@ -861,7 +929,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">10 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">11 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 11 · AI SYSTEM ============================================================ -->
@@ -901,7 +969,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">11 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">12 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 12 · ENGINEERING HIGHLIGHTS (HERO) ============================================================ -->
@@ -931,10 +999,23 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
       </div>
       <div class="hero-tagline reveal d6">تصميم خلفي بمستوى الإنتاج <span class="en">· Production-grade backend design</span></div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">12 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">13 / 18</div></div>
   </section>
 
-  <!-- ============================================================ SLIDE 13 · CHALLENGES ============================================================ -->
+  <!-- ============================================================ SLIDE 14 · APP DEMO (interstitial · العرض التطبيقي) ============================================================ -->
+  <section class="slide" dir="rtl">
+    <div class="blob" style="width:520px;height:520px;background:rgba(37,192,90,.16);top:-120px;right:-80px;position:absolute;border-radius:50%;filter:blur(10px);z-index:0;"></div>
+    <div class="blob" style="width:420px;height:420px;background:rgba(94,124,62,.14);bottom:-140px;left:60px;position:absolute;border-radius:50%;filter:blur(10px);z-index:0;"></div>
+    <div class="closing">
+      <div class="ckick reveal d1">العرض التطبيقي <span class="en">· Live Demo</span></div>
+      <h1 class="cbig reveal d2">عرض <span class="g">التطبيق</span></h1>
+      <p class="csum reveal d3">ننتقل الآن إلى <b>عرض مباشر</b> للتطبيق، لنرى مزايا <b>Parlo</b> أثناء العمل الفعلي.</p>
+      <div class="hero-tagline reveal d5" style="align-self:flex-start;">الآن مع العرض التطبيقي <span class="en">· Now: application demo</span></div>
+    </div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">14 / 18</div></div>
+  </section>
+
+  <!-- ============================================================ SLIDE 15 · CHALLENGES ============================================================ -->
   <section class="slide" dir="rtl">
     <div class="frame">
       <div class="head reveal d1">
@@ -949,7 +1030,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <div class="lrow reveal d6"><div class="badge">05</div><div class="lchal"><div class="ct">تكامل منصّات الوسائط الخارجية</div><div class="cp">قيود المنصّات تمنع الوصول المباشر لوسائط YouTube / TikTok.</div></div><div class="arr">←</div><div class="sol"><span class="mono">yt-dlp</span> مع محلّل وسائط موحّد يدعم عدة مصادر ومعالجة احتياطية.</div></div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">13 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">15 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 11 · RESULTS ============================================================ -->
@@ -973,7 +1054,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         </div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">14 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">16 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 12 · FUTURE ============================================================ -->
@@ -992,7 +1073,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <div class="irow reveal d4"><div class="badge">06</div><div><h3>تحسين الأداء</h3><p>رفع كفاءة التطبيق على الأجهزة.</p></div></div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">15 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">17 / 18</div></div>
   </section>
 
   <!-- ============================================================ SLIDE 13 · CLOSING ============================================================ -->
@@ -1008,7 +1089,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <div class="fc"><div class="cl">Q &amp; A</div><div class="cv">الباب مفتوح للأسئلة</div></div>
       </div>
     </div>
-    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">16 / 16</div></div>
+    <div class="foot"><div class="brandmark"><span class="logo"><span></span></span><b>Parlo</b></div><div class="pagenum">18 / 18</div></div>
   </section>
 
 </main>
@@ -1018,7 +1099,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
 <div class="deck-progress"><div class="deck-progress__fill" id="progressFill"></div></div>
 <div class="deck-nav">
   <button class="navbtn" id="navPrev" aria-label="السابق">‹</button>
-  <span class="navcount" id="navCount">01 / 16</span>
+  <span class="navcount" id="navCount">01 / 18</span>
   <button class="navbtn" id="navNext" aria-label="التالي">›</button>
 </div>
 
@@ -1084,7 +1165,7 @@ const deck=new SlidePresentation();window.deck=deck;
    INLINE EDITOR:E key / hover hotzone, localStorage autosave
    =========================================================== */
 class Editor{
-  constructor(){this.active=false;this.KEY='parlo-deck-final-edits';this.load();
+  constructor(){this.active=false;this.KEY='parlo-deck-17slides-v2';this.load();
     const btn=document.getElementById('editToggle'),hz=document.getElementById('editHotzone');let t=null;
     btn.addEventListener('click',()=>this.toggle());hz.addEventListener('click',()=>this.toggle());
     hz.addEventListener('mouseenter',()=>{clearTimeout(t);btn.classList.add('show');});
